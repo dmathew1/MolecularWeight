@@ -24,7 +24,10 @@ public class MolecularWeight {
 
     //check string
     private static boolean isString(String string){
-        String stringRegex = "[A-Za-z]";
+
+        //credit for this regex goes to John Cook
+        // https://plus.google.com/+JohnCook/posts/fK9nJHttzPL
+        String stringRegex = "A[cglmrstu]|B[aehikr]?|C[adeflmnorsu]?|D[bsy]|E[rsu]|F[elmr]?|G[ade]|H[efgos]?|I[nr]?|Kr?|L[airuv]|M[dgnot]|N[abdeiop]?|Os?|P[abdmortu]?|R[abefghnu]|S[bcegimnr]?|T[abcehilm]|U(u[opst])?|V|W|Xe|Yb?|Z[nr]";
         if(Pattern.matches(stringRegex,string)){
             return true;
         }else{
